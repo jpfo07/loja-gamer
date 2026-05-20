@@ -5,7 +5,7 @@
 > Desenvolvido como Checkpoint 3 — Disciplina Front/Web — FIAP 1ESPG
 
 ## 🌐 GitHub Pages
-🔗 **[]**
+🔗 **[https://jpfo07.github.io/loja-gamer/]**
 
 ---
 
