@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portifólio NexusGear — Catálogo completo de periféricos e hardware gamer." />
+  <title>Portifólio | NexusGear</title>
+  <link rel="stylesheet" href="../src/css/estilo.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">NEXUS<span>GEAR</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="portifolio.html" class="active">Portifólio</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html" class="nav-cta">Contato</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <button class="nav-cart-btn" onclick="openCart()" aria-label="Carrinho">
+        🛒 Carrinho
+        <span class="cart-count" id="cart-count-nav">0</span>
+      </button>
+      <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Carrinho</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">
+        <span class="empty-icon">🎮</span>
+        <p>Nenhum item no carrinho ainda.<br>Explore nosso portfólio!</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-value" id="cart-total-val">R$ 0,00</span>
+      </div>
+      <a href="contato.html" class="btn-primary" style="width:100%; text-align:center;">Finalizar Compra</a>
+    </div>
+  </aside>
+
+  <!-- ===== PORTFOLIO HERO ===== -->
+  <section class="portfolio-hero">
+    <div class="section-tag">// Nosso catálogo</div>
+    <h1 class="section-title">Portifólio de Produtos</h1>
+    <p class="section-desc" style="margin:1rem auto 0;">Filtre por categoria e encontre o equipamento perfeito para o seu setup</p>
+  </section>
+
+  <!-- ===== FILTER + PRODUCTS ===== -->
+  <section class="container" style="padding-top: 2rem;">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="mouse">🖱️ Mouse</button>
+      <button class="filter-btn" data-filter="teclado">⌨️ Teclado</button>
+      <button class="filter-btn" data-filter="headset">🎧 Headset</button>
+      <button class="filter-btn" data-filter="monitor">🖥️ Monitor</button>
+      <button class="filter-btn" data-filter="cadeira">🪑 Cadeira</button>
+      <button class="filter-btn" data-filter="mousepad">🎯 Mousepad</button>
+    </div>
+
+    <div class="products-grid" id="portfolio-grid">
+
+      <!-- MOUSES -->
+      <div class="product-card" data-category="mouse">
+        <span class="card-badge badge-hot">🔥 HOT</span>
+        <div class="card-img">
+          <img src="../src/assets/img/mouse-1.jpg" alt="NexusGear X Pro Wireless" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Mouse Gaming</div>
+          <div class="card-title">NexusGear X Pro Wireless 25K DPI</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.9 · 312)</span></div>
+          <div class="card-price"><span class="price-old">R$ 599,00</span><span class="price-current">R$ 449,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="mouse">
+        <span class="card-badge badge-sale">−30%</span>
+        <div class="card-img">
+          <img src="../src/assets/img/mouse-2.jpg" alt="SwiftClick Ultralight" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Mouse Gaming</div>
+          <div class="card-title">SwiftClick Ultralight 69g 20K DPI</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.8 · 198)</span></div>
+          <div class="card-price"><span class="price-old">R$ 399,00</span><span class="price-current">R$ 279,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="mouse">
+        <span class="card-badge badge-new">✦ NOVO</span>
+        <div class="card-img">
+          <img src="../src/assets/img/mouse-3.jpg" alt="PrecisionAim V2" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Mouse Gaming</div>
+          <div class="card-title">PrecisionAim V2 8K Poll Rate</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.7 · 45)</span></div>
+          <div class="card-price"><span class="price-current">R$ 529,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <!-- TECLADOS -->
+      <div class="product-card" data-category="teclado">
+        <span class="card-badge badge-new">✦ NOVO</span>
+        <div class="card-img">
+          <img src="../src/assets/img/teclado-1.jpg" alt="TactX Mech 60%" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Teclado Mecânico</div>
+          <div class="card-title">TactX Mech 60% RGB Switch Red</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.8 · 201)</span></div>
+          <div class="card-price"><span class="price-old">R$ 780,00</span><span class="price-current">R$ 629,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="teclado">
+        <div class="card-img">
+          <img src="../src/assets/img/teclado-2.jpg" alt="ClickMaster TKL" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Teclado Mecânico</div>
+          <div class="card-title">ClickMaster TKL Switch Blue HotSwap</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.5 · 134)</span></div>
+          <div class="card-price"><span class="price-current">R$ 459,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="teclado">
+        <span class="card-badge badge-sale">−25%</span>
+        <div class="card-img">
+          <img src="../src/assets/img/teclado-3.jpg" alt="RapidFire Full-Size" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Teclado Gamer</div>
+          <div class="card-title">RapidFire Full-Size Membrana RGB</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.3 · 389)</span></div>
+          <div class="card-price"><span class="price-old">R$ 259,00</span><span class="price-current">R$ 194,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <!-- HEADSETS -->
+      <div class="product-card" data-category="headset">
+        <span class="card-badge badge-sale">−40%</span>
+        <div class="card-img">
+          <img src="../src/assets/img/headset-1.jpg" alt="SoundWar 7.1" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Headset 7.1</div>
+          <div class="card-title">SoundWar 7.1 Surround Pro Edition</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.6 · 527)</span></div>
+          <div class="card-price"><span class="price-old">R$ 499,00</span><span class="price-current">R$ 299,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="headset">
+        <span class="card-badge badge-hot">🔥 HOT</span>
+        <div class="card-img">
+          <img src="../src/assets/img/headset-2.jpg" alt="EchoElite Pro Wireless" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Headset Wireless</div>
+          <div class="card-title">EchoElite Pro Wireless 50mm Driver</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.9 · 88)</span></div>
+          <div class="card-price"><span class="price-old">R$ 699,00</span><span class="price-current">R$ 549,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <!-- MONITORES -->
+      <div class="product-card" data-category="monitor">
+        <div class="card-img">
+          <img src="../src/assets/img/monitor-1.jpg" alt="ViewMax 27" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Monitor Gaming</div>
+          <div class="card-title">ViewMax 27" 240Hz IPS 1ms QHD</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.9 · 88)</span></div>
+          <div class="card-price"><span class="price-current">R$ 2.199,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="monitor">
+        <span class="card-badge badge-sale">−20%</span>
+        <div class="card-img">
+          <img src="../src/assets/img/monitor-2.jpg" alt="FrameKing 24" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Monitor Gaming</div>
+          <div class="card-title">FrameKing 24" 165Hz VA 1ms FHD</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.5 · 210)</span></div>
+          <div class="card-price"><span class="price-old">R$ 1.299,00</span><span class="price-current">R$ 1.039,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <!-- CADEIRAS -->
+      <div class="product-card" data-category="cadeira">
+        <span class="card-badge badge-hot">🔥 HOT</span>
+        <div class="card-img">
+          <img src="../src/assets/img/cadeira-1.jpg" alt="ThroneX Pro ErgoMax" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Cadeira Gamer</div>
+          <div class="card-title">ThroneX Pro ErgoMax Reclinável 180°</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.8 · 445)</span></div>
+          <div class="card-price"><span class="price-old">R$ 1.899,00</span><span class="price-current">R$ 1.499,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="cadeira">
+        <div class="card-img">
+          <img src="../src/assets/img/cadeira-2.jpg" alt="NexChair Compact" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Cadeira Gamer</div>
+          <div class="card-title">NexChair Compact Apoio Lombar</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.3 · 167)</span></div>
+          <div class="card-price"><span class="price-current">R$ 899,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <!-- MOUSEPADS -->
+      <div class="product-card" data-category="mousepad">
+        <span class="card-badge badge-new">✦ NOVO</span>
+        <div class="card-img">
+          <img src="../src/assets/img/mousepad-1.png" alt="ControlZone XL RGB" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Mousepad XL</div>
+          <div class="card-title">ControlZone XL RGB 90x40cm Speed</div>
+          <div class="card-rating"><span class="star">★★★★★</span><span>(4.9 · 620)</span></div>
+          <div class="card-price"><span class="price-old">R$ 189,00</span><span class="price-current">R$ 149,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="mousepad">
+        <div class="card-img">
+          <img src="../src/assets/img/mousepad-2.png" alt="GlideZone Pro" />
+        </div>
+        <div class="card-body">
+          <div class="card-category">Mousepad Médio</div>
+          <div class="card-title">GlideZone Pro 45x35cm Control</div>
+          <div class="card-rating"><span class="star">★★★★☆</span><span>(4.4 · 198)</span></div>
+          <div class="card-price"><span class="price-current">R$ 89,90</span></div>
+          <button class="card-btn">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROMO BANNER ===== -->
+  <section class="container" style="padding-top:0">
+    <div class="promo-banner">
+      <span class="promo-tag">⚡ Oferta da semana</span>
+      <h2 class="promo-title">Kit Setup Completo com <span>50% OFF</span></h2>
+      <p class="promo-subtitle">Mouse + Teclado + Headset + Mousepad XL — Monte o setup dos sonhos gastando menos</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-unit"><span class="countdown-num" id="cd-days">00</span><span class="countdown-label">Dias</span></div>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-hours">00</span><span class="countdown-label">Horas</span></div>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-mins">00</span><span class="countdown-label">Min</span></div>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-secs">00</span><span class="countdown-label">Seg</span></div>
+      </div>
+      <a href="contato.html" class="btn-primary">QUERO O KIT COMPLETO</a>
+    </div>
+  </section>
+
+  <!-- ===== TABELA DE PREÇOS ===== -->
+  <section class="container">
+    <div class="section-header">
+      <div class="section-tag">// Comparativo</div>
+      <h2 class="section-title">Tabela de Preços</h2>
+      <p class="section-desc">Todos os preços e promoções ativas em um só lugar</p>
+    </div>
+
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Preço</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/mouse-1.jpg" alt="Mouse 1" /></td>
+            <td><span class="prod-name">NexusGear X Pro Wireless 25K DPI</span></td>
+            <td>Mouse Gaming</td>
+            <td><span class="old-p">R$ 599,00</span><span class="new-p">R$ 449,90</span></td>
+            <td><span class="badge-inline badge-hot">🔥 HOT</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/mouse-2.jpg" alt="Mouse 2" /></td>
+            <td><span class="prod-name">SwiftClick Ultralight 69g 20K DPI</span></td>
+            <td>Mouse Gaming</td>
+            <td><span class="old-p">R$ 399,00</span><span class="new-p">R$ 279,90</span></td>
+            <td><span class="badge-inline badge-sale">−30%</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/mouse-3.jpg" alt="Mouse 3" /></td>
+            <td><span class="prod-name">PrecisionAim V2 8K Poll Rate</span></td>
+            <td>Mouse Gaming</td>
+            <td><span class="new-p">R$ 529,90</span></td>
+            <td><span class="badge-inline badge-new">✦ NOVO</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/teclado-1.jpg" alt="Teclado 1" /></td>
+            <td><span class="prod-name">TactX Mech 60% RGB Switch Red</span></td>
+            <td>Teclado Mecânico</td>
+            <td><span class="old-p">R$ 780,00</span><span class="new-p">R$ 629,90</span></td>
+            <td><span class="badge-inline badge-new">✦ NOVO</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/teclado-2.jpg" alt="Teclado 2" /></td>
+            <td><span class="prod-name">ClickMaster TKL Switch Blue HotSwap</span></td>
+            <td>Teclado Mecânico</td>
+            <td><span class="new-p">R$ 459,90</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/teclado-3.jpg" alt="Teclado 3" /></td>
+            <td><span class="prod-name">RapidFire Full-Size Membrana RGB</span></td>
+            <td>Teclado Gamer</td>
+            <td><span class="old-p">R$ 259,00</span><span class="new-p">R$ 194,90</span></td>
+            <td><span class="badge-inline badge-sale">−25%</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/headset-1.jpg" alt="Headset 1" /></td>
+            <td><span class="prod-name">SoundWar 7.1 Surround Pro Edition</span></td>
+            <td>Headset 7.1</td>
+            <td><span class="old-p">R$ 499,00</span><span class="new-p">R$ 299,90</span></td>
+            <td><span class="badge-inline badge-sale">−40%</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/headset-2.jpg" alt="Headset 2" /></td>
+            <td><span class="prod-name">EchoElite Pro Wireless 50mm Driver</span></td>
+            <td>Headset Wireless</td>
+            <td><span class="old-p">R$ 699,00</span><span class="new-p">R$ 549,90</span></td>
+            <td><span class="badge-inline badge-hot">🔥 HOT</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/monitor-1.jpg" alt="Monitor 1" /></td>
+            <td><span class="prod-name">ViewMax 27" 240Hz IPS 1ms QHD</span></td>
+            <td>Monitor Gaming</td>
+            <td><span class="new-p">R$ 2.199,90</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/monitor-2.jpg" alt="Monitor 2" /></td>
+            <td><span class="prod-name">FrameKing 24" 165Hz VA 1ms FHD</span></td>
+            <td>Monitor Gaming</td>
+            <td><span class="old-p">R$ 1.299,00</span><span class="new-p">R$ 1.039,90</span></td>
+            <td><span class="badge-inline badge-sale">−20%</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/cadeira-1.jpg" alt="Cadeira 1" /></td>
+            <td><span class="prod-name">ThroneX Pro ErgoMax Reclinável 180°</span></td>
+            <td>Cadeira Gamer</td>
+            <td><span class="old-p">R$ 1.899,00</span><span class="new-p">R$ 1.499,90</span></td>
+            <td><span class="badge-inline badge-hot">🔥 HOT</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/cadeira-2.jpg" alt="Cadeira 2" /></td>
+            <td><span class="prod-name">NexChair Compact Apoio Lombar</span></td>
+            <td>Cadeira Gamer</td>
+            <td><span class="new-p">R$ 899,90</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/mousepad-1.png" alt="Mousepad 1" /></td>
+            <td><span class="prod-name">ControlZone XL RGB 90x40cm Speed</span></td>
+            <td>Mousepad XL</td>
+            <td><span class="old-p">R$ 189,00</span><span class="new-p">R$ 149,90</span></td>
+            <td><span class="badge-inline badge-new">✦ NOVO</span></td>
+          </tr>
+          <tr>
+            <td class="prod-icon"><img src="../src/assets/img/mousepad-2.png" alt="Mousepad 2" /></td>
+            <td><span class="prod-name">GlideZone Pro 45x35cm Control</span></td>
+            <td>Mousepad Médio</td>
+            <td><span class="new-p">R$ 89,90</span></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo">NEXUS<span>GEAR</span></a>
+        <p class="footer-desc">A loja gamer definitiva para quem leva o game a sério. Periféricos de elite, preços competitivos e atendimento de campeão desde 2018.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">📸</a>
+          <a href="#" class="social-link" title="Twitter/X">🐦</a>
+          <a href="#" class="social-link" title="YouTube">▶️</a>
+          <a href="#" class="social-link" title="Discord">💬</a>
+          <a href="#" class="social-link" title="Twitch">🎮</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="portifolio.html">Portifólio</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul class="footer-links">
+          <li><a href="portifolio.html?cat=mouse">Mouses</a></li>
+          <li><a href="portifolio.html?cat=teclado">Teclados</a></li>
+          <li><a href="portifolio.html?cat=headset">Headsets</a></li>
+          <li><a href="portifolio.html?cat=monitor">Monitores</a></li>
+          <li><a href="portifolio.html?cat=cadeira">Cadeiras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="footer-contact-item"><span>📞</span><span>(11) 99999-0101</span></div>
+        <div class="footer-contact-item"><span>📧</span><span>contato@nexusgear.com.br</span></div>
+        <div class="footer-contact-item"><span>📍</span><span>Av. Paulista, 1000 — SP</span></div>
+        <div class="footer-contact-item"><span>🕐</span><span>Seg–Sex: 9h–18h</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>NexusGear</span>. Todos os direitos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Trocas &amp; Devoluções</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../src/js/script.js"></script>
+</body>
+</html>
