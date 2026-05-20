@@ -1,0 +1,42 @@
+/* =====================================================
+   NEXUSGEAR — estilo.css
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+  --bg-primary:    #0e0c0c;
+  --bg-secondary:  #141010;
+  --bg-card:       #1a1414;
+  --bg-card-hover: #201818;
+  --accent:        #d42b2b;
+  --accent-dim:    #a01f1f;
+  --accent-light:  #e84444;
+  --accent-glow:   rgba(212, 43, 43, 0.35);
+  --text-primary:  #f0ece8;
+  --text-muted:    #8a7f7a;
+  --text-faint:    #4a4040;
+  --border:        rgba(212, 43, 43, 0.18);
+  --border-hover:  rgba(212, 43, 43, 0.5);
+  --font-display:  'Bebas Neue', cursive;
+  --font-body:     'DM Sans', sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+  --transition:    all 0.25s ease;
+  --radius:        6px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.5);
+  --glow:          0 0 20px rgba(212,43,43,0.4);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
