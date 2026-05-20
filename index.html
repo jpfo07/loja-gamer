@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NexusGear — A melhor loja gamer do Brasil. Periféricos, hardware e equipamentos de ponta para elevar seu gameplay." />
+  <title>NexusGear | Loja Gamer</title>
+  <link rel="stylesheet" href="src/css/estilo.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">NEXUS<span>GEAR</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/portifolio.html">Portifólio</a></li>
+      <li><a href="pages/sobre.html">Sobre</a></li>
+      <li><a href="pages/contato.html" class="nav-cta">Contato</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <button class="nav-cart-btn" onclick="openCart()" aria-label="Carrinho">
+        🛒 Carrinho
+        <span class="cart-count" id="cart-count-nav">0</span>
+      </button>
+      <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Carrinho</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">
+        <span class="empty-icon">🎮</span>
+        <p>Nenhum item no carrinho ainda.<br>Explore nosso portfólio!</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-value" id="cart-total-val">R$ 0,00</span>
+      </div>
+      <a href="pages/contato.html" class="btn-primary" style="width:100%; text-align:center;">Finalizar Compra</a>
+    </div>
+  </aside>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="hero-banner" id="home">
+    <div class="hero-banner-inner">
+      <img
+        src="src/assets/img/banner.png"
+        alt="NexusGear — A melhor loja para seu Setup Gamer"
+        class="hero-banner-img"
+      />
+      <div class="hero-banner-overlay">
+        <div class="hero-banner-cta">
+          <a href="pages/portifolio.html" class="btn-primary">Ver Produtos</a>
+          <a href="pages/sobre.html" class="btn-secondary">Nossa História</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HERO STATS ===== -->
+  <section class="hero-stats-strip">
+    <div class="container hero-stats-inner">
+      <div class="stat-item">
+        <span class="stat-number" data-counter data-target="15000" data-suffix="+">0</span>
+        <span class="stat-label">Clientes</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-counter data-target="500" data-suffix="+">0</span>
+        <span class="stat-label">Produtos</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-counter data-target="98" data-suffix="%">0</span>
+        <span class="stat-label">Satisfação</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-counter data-target="7" data-suffix=" Anos">0</span>
+        <span class="stat-label">No Mercado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="categories container">
+    <div class="section-header">
+      <div class="section-tag">// Navegue por categoria</div>
+      <h2 class="section-title">O Que Você Precisa?</h2>
+    </div>
+    <div class="categories-grid">
+      <a href="pages/portifolio.html?cat=mouse" class="cat-item">
+        <span class="cat-icon">🖱️</span>
+        <span class="cat-name">Mouses</span>
+      </a>
+      <a href="pages/portifolio.html?cat=teclado" class="cat-item">
+        <span class="cat-icon">⌨️</span>
+        <span class="cat-name">Teclados</span>
+      </a>
+      <a href="pages/portifolio.html?cat=headset" class="cat-item">
+        <span class="cat-icon">🎧</span>
+        <span class="cat-name">Headsets</span>
+      </a>
+      <a href="pages/portifolio.html?cat=monitor" class="cat-item">
+        <span class="cat-icon">🖥️</span>
+        <span class="cat-name">Monitores</span>
+      </a>
+      <a href="pages/portifolio.html?cat=cadeira" class="cat-item">
+        <span class="cat-icon">🪑</span>
+        <span class="cat-name">Cadeiras</span>
+      </a>
+      <a href="pages/portifolio.html?cat=mousepad" class="cat-item">
+        <span class="cat-icon">🎯</span>
+        <span class="cat-name">Mousepads</span>
+      </a>
+      <a href="pages/portifolio.html?cat=gpu" class="cat-item">
+        <span class="cat-icon">💻</span>
+        <span class="cat-name">Placas de Vídeo</span>
+      </a>
+      <a href="pages/portifolio.html?cat=controle" class="cat-item">
+        <span class="cat-icon">🎮</span>
+        <span class="cat-name">Controles</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="featured">
+    <div class="container" style="padding-top:0">
+      <div class="section-header">
+        <div class="section-tag">// Mais vendidos</div>
+        <h2 class="section-title">Produtos em Destaque</h2>
+        <p class="section-desc">Os favoritos da nossa comunidade gamer, testados e aprovados</p>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card" data-category="mouse">
+          <span class="card-badge badge-hot">🔥 HOT</span>
+          <div class="card-img">
+            <img src="src/assets/img/mouse-1.jpg" alt="NexusGear X Pro Wireless" />
+          </div>
+          <div class="card-body">
+            <div class="card-category">Mouse Gaming</div>
+            <div class="card-title">NexusGear X Pro Wireless 25K DPI</div>
+            <div class="card-rating">
+              <span class="star">★★★★★</span>
+              <span>(4.9 · 312 avaliações)</span>
+            </div>
+            <div class="card-price">
+              <span class="price-old">R$ 599,00</span>
+              <span class="price-current">R$ 449,90</span>
+            </div>
+            <button class="card-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="teclado">
+          <span class="card-badge badge-new">✦ NOVO</span>
+          <div class="card-img">
+            <img src="src/assets/img/teclado-1.jpg" alt="TactX Mech 60%" />
+          </div>
+          <div class="card-body">
+            <div class="card-category">Teclado Mecânico</div>
+            <div class="card-title">TactX Mech 60% RGB Switch Red</div>
+            <div class="card-rating">
+              <span class="star">★★★★★</span>
+              <span>(4.8 · 201 avaliações)</span>
+            </div>
+            <div class="card-price">
+              <span class="price-old">R$ 780,00</span>
+              <span class="price-current">R$ 629,90</span>
+            </div>
+            <button class="card-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="headset">
+          <span class="card-badge badge-sale">−40%</span>
+          <div class="card-img">
+            <img src="src/assets/img/headset-1.jpg" alt="SoundWar 7.1" />
+          </div>
+          <div class="card-body">
+            <div class="card-category">Headset 7.1</div>
+            <div class="card-title">SoundWar 7.1 Surround Pro Edition</div>
+            <div class="card-rating">
+              <span class="star">★★★★☆</span>
+              <span>(4.6 · 527 avaliações)</span>
+            </div>
+            <div class="card-price">
+              <span class="price-old">R$ 499,00</span>
+              <span class="price-current">R$ 299,90</span>
+            </div>
+            <button class="card-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="monitor">
+          <div class="card-img">
+            <img src="src/assets/img/monitor-1.jpg" alt="ViewMax 27" />
+          </div>
+          <div class="card-body">
+            <div class="card-category">Monitor Gaming</div>
+            <div class="card-title">ViewMax 27" 240Hz IPS 1ms QHD</div>
+            <div class="card-rating">
+              <span class="star">★★★★★</span>
+              <span>(4.9 · 88 avaliações)</span>
+            </div>
+            <div class="card-price">
+              <span class="price-current">R$ 2.199,90</span>
+            </div>
+            <button class="card-btn">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="pages/portifolio.html" class="btn-primary">Ver Todos os Produtos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMO BANNER ===== -->
+  <section class="container" style="padding-top:0">
+    <div class="promo-banner">
+      <span class="promo-tag">⚡ Oferta relâmpago</span>
+      <h2 class="promo-title">Até <span>60% OFF</span> em Periféricos</h2>
+      <p class="promo-subtitle">Aproveite antes que acabe — estoque limitado!</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-days">00</span>
+          <span class="countdown-label">Dias</span>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-mins">00</span>
+          <span class="countdown-label">Min</span>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-secs">00</span>
+          <span class="countdown-label">Seg</span>
+        </div>
+      </div>
+      <a href="pages/portifolio.html" class="btn-primary">APROVEITAR AGORA</a>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section style="padding: 5rem 2rem; background: var(--bg-secondary);">
+    <div class="container" style="padding:0">
+      <div class="section-header">
+        <div class="section-tag">// Por que a NexusGear?</div>
+        <h2 class="section-title">Sua Vantagem Competitiva</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <div class="about-stat-box">
+          <span style="font-size: 2rem; display:block; margin-bottom: 1rem;">🚀</span>
+          <div class="team-name">Frete Expresso</div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.5rem; line-height:1.6;">Entrega em 24h para capitais. Rastreamento em tempo real.</p>
+        </div>
+        <div class="about-stat-box">
+          <span style="font-size: 2rem; display:block; margin-bottom: 1rem;">🛡️</span>
+          <div class="team-name">Garantia Estendida</div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.5rem; line-height:1.6;">2 anos de garantia em todos os produtos + suporte técnico.</p>
+        </div>
+        <div class="about-stat-box">
+          <span style="font-size: 2rem; display:block; margin-bottom: 1rem;">💳</span>
+          <div class="team-name">Parcelamento</div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.5rem; line-height:1.6;">Até 12x sem juros no cartão. PIX com 5% de desconto extra.</p>
+        </div>
+        <div class="about-stat-box">
+          <span style="font-size: 2rem; display:block; margin-bottom: 1rem;">🎮</span>
+          <div class="team-name">Curadoria Gamer</div>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.5rem; line-height:1.6;">Todos os produtos são testados por nossa equipe de jogadores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">NEXUS<span>GEAR</span></a>
+        <p class="footer-desc">
+          A loja gamer definitiva para quem leva o game a sério. Periféricos de elite, preços competitivos e atendimento de campeão desde 2018.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">📸</a>
+          <a href="#" class="social-link" title="Twitter/X">🐦</a>
+          <a href="#" class="social-link" title="YouTube">▶️</a>
+          <a href="#" class="social-link" title="Discord">💬</a>
+          <a href="#" class="social-link" title="Twitch">🎮</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/portifolio.html">Portifólio</a></li>
+          <li><a href="pages/sobre.html">Sobre Nós</a></li>
+          <li><a href="pages/contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul class="footer-links">
+          <li><a href="pages/portifolio.html?cat=mouse">Mouses</a></li>
+          <li><a href="pages/portifolio.html?cat=teclado">Teclados</a></li>
+          <li><a href="pages/portifolio.html?cat=headset">Headsets</a></li>
+          <li><a href="pages/portifolio.html?cat=monitor">Monitores</a></li>
+          <li><a href="pages/portifolio.html?cat=cadeira">Cadeiras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="footer-contact-item"><span>📞</span><span>(11) 99999-0101</span></div>
+        <div class="footer-contact-item"><span>📧</span><span>contato@nexusgear.com.br</span></div>
+        <div class="footer-contact-item"><span>📍</span><span>Av. Paulista, 1000 — São Paulo, SP</span></div>
+        <div class="footer-contact-item"><span>🕐</span><span>Seg–Sex: 9h–18h</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span>NexusGear</span>. Todos os direitos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Trocas &amp; Devoluções</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/script.js"></script>
+</body>
+</html>
