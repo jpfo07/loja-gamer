@@ -70,14 +70,24 @@ nav.scrolled {
   box-shadow: 0 2px 20px rgba(212,43,43,0.12);
 }
 
+
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--text-primary);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: 3px;
 }
-.nav-logo span { color: var(--accent); }
+
+.nav-logo img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: var(--transition);
+}
+
+.nav-logo img:hover {
+  transform: scale(1.03);
+}
 
 .nav-links {
   display: flex;
