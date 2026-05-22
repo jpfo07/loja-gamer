@@ -9,19 +9,26 @@
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo">
-  <img src="src/assets/img/logo.jpg" alt="Forge Gaming Logo">
+  
+   <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+   <a href="../index.html" class="nav-logo">
+  <img src="../src/assets/img/logo.jpg" alt="Forge Gaming Logo">
 </a>
     <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="portifolio.html">Portifólio</a></li>
-      <li><a href="sobre.html" class="active">Sobre</a></li>
-      <li><a href="contato.html" class="nav-cta">Contato</a></li>
+      <li><a href="../index.html" >Home</a></li>
+      <li><a href="./portifolio.html">Portifólio</a></li>
+      <li><a href="./sobre.html" class="active">Sobre</a></li>
+      <li><a href="./contato.html" class="nav-cta">Contato</a></li>
     </ul>
-    <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
-      <span></span><span></span><span></span>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <button class="nav-cart-btn" onclick="openCart()" aria-label="Carrinho">
+        🛒 Carrinho
+        <span class="cart-count" id="cart-count-nav">0</span>
+      </button>
+      <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </nav>
 
@@ -216,7 +223,9 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="../index.html" class="nav-logo">FORGE<span>GAMING</span></a>
+         <a href="index.html" class="nav-logo">
+  <img src="../src/assets/img/logo.jpg" alt="Forge Gaming Logo">
+</a>
         <p class="footer-desc">A loja gamer definitiva para quem leva o game a sério.</p>
         <div class="social-links">
           <a href="#" class="social-link">📸</a>
@@ -230,9 +239,9 @@
         <h4>Navegação</h4>
         <ul class="footer-links">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="portifolio.html">Portifólio</a></li>
-          <li><a href="sobre.html">Sobre Nós</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="../pages/portifolio.html">Portifólio</a></li>
+          <li><a href="../pages/sobre.html">Sobre Nós</a></li>
+          <li><a href="../pages/contato.html">Contato</a></li>
         </ul>
       </div>
       <div class="footer-col">
