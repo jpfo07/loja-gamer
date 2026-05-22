@@ -1,5 +1,5 @@
 
-# 🎮 NexusGear — Loja Gamer
+# 🎮 ForgeGaming — Loja Gamer
 
 > Site dinâmico e responsivo para loja de periféricos e hardware gamer.  
 > Desenvolvido como Checkpoint 3 — Disciplina Front/Web — FIAP 1ESPG
